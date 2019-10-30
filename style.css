@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -11,6 +12,7 @@ body {
   height: 80px;
   width: 100%;
   background-color: #F1F2F2;
+ /* opacity: 0.7; */
   position: relative;
 }
 
@@ -23,6 +25,7 @@ body {
   font-size: 30px;
   position: relative;
   top: -20px;
+  left: 40px;
   height: 130px;
 }
 
@@ -96,4 +99,73 @@ body {
     height: calc(100vh - 80px);
     overflow-y: auto;
   }
+}
+
+@import "compass/css3";
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+aside {
+	float: left; 
+	margin-left: 30px; 
+	margin-right: 50px; 
+	width: 30%;
+}
+
+article {
+ -moz-column-width: 13em;
+ -webkit-column-width: 13em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap: 1em; 
+  
+}
+
+section {
+ display: inline-block;
+ margin:  0.25rem;
+ padding:  1rem;
+ width:  100%; 
+ background:  #efefef;
+}
+
+
+p {
+ margin:  1rem 0; 
+ font-size: 18px;
+}
+
+body {
+ padding:  0em;
+}
+
+
+
+
+h1 {
+  font-size:  3rem;
+  font-weight:  500;
+  text-align: left;
+}
+
+
+p {
+ text-align:  left;
+}
+
+.carousel {
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-image: url("back.jpg");
+  color: white;
+}
+
+.carousel > h1 {
+	margin-left: 50px;
+
+}
+.carousel > p {
+  font-size: 28px;
+  margin-left: 50px;
+  color: white;
 }
