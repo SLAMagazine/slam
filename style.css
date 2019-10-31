@@ -1,32 +1,32 @@
+@import "compass/css3";
+
+*, *:before, *:after {box-sizing:  border-box !important;}
 * {
   box-sizing: border-box;
-
 }
+
 
 body {
   margin: 0px;
   font-family: 'segoe ui';
+  font-size: 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 80px 700px
 }
 
 .nav {
-  height: 80px;
-  width: 100%;
   background-color: #F1F2F2;
- /* opacity: 0.7; */
-  position: relative;
 }
 
 .nav > .nav-header {
-  display: inline;
 }
 
 .nav > .nav-header > #logo {
-  display: inline-block;
-  font-size: 30px;
-  position: relative;
-  top: -20px;
-  left: 5px;
-  height: 130px;
+  margin-top: -20px;
+  height: 135px;
 }
 
 
@@ -55,6 +55,73 @@ body {
   display: none;
 }
 
+
+.carousel {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  background-image: url("back.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+
+}
+
+.carousel > h1 {
+	margin: 1rem;
+  align-self: flex-end;
+  float: right;
+  font-size:  4rem;
+  font-weight:  300;
+  text-shadow: 1px 1px 3px #000;
+  text-align: left;
+}
+.carousel > p {
+  font-size: 26px;
+  margin: 1rem;
+  align-self: flex-end;
+  float: left;
+  max-width: 60rem;
+  text-align:  left;
+  font-weight:  300;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.middle {
+  margin-top: 0.5em;
+  margin-left: 1em;
+  margin-right: 0.75em;
+  column-gap: 0.25em;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#main > h2 {
+  color:red;
+  font-weight: 500;
+}
+
+.cardscon {
+}
+
+article.cards {
+  margin: 0.25rem;
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap: 1em;
+
+}
+
+section {
+ display: inline-block;
+ margin:  0.25rem;
+ padding:  1rem;
+ width:  100%;
+ background:  #efefef;
+}
+
 @media (max-width:1280px) {
   .nav > .nav-btn {
     display: inline-block;
@@ -64,7 +131,6 @@ body {
   }
   .nav > .nav-btn > label {
     display: inline-block;
-    width: 80px;
     height: 80px;
     padding: 15px;
   }
@@ -99,73 +165,4 @@ body {
     height: calc(100vh - 80px);
     overflow-y: auto;
   }
-}
-
-@import "compass/css3";
-
-*, *:before, *:after {box-sizing:  border-box !important;}
-aside {
-	float: left; 
-	margin-left: 30px; 
-	margin-right: 50px; 
-	width: 30%;
-}
-
-article {
- -moz-column-width: 13em;
- -webkit-column-width: 13em;
- -moz-column-gap: 1em;
- -webkit-column-gap: 1em; 
-  
-}
-
-section {
- display: inline-block;
- margin:  0.25rem;
- padding:  1rem;
- width:  100%; 
- background:  #efefef;
-}
-
-
-p {
- margin:  1rem 0; 
- font-size: 18px;
-}
-
-body {
- padding:  0em;
-}
-
-
-
-
-h1 {
-  font-size:  3rem;
-  font-weight:  500;
-  text-align: left;
-}
-
-
-p {
- text-align:  left;
-}
-
-.carousel {
-  display: inline-block;
-  height: 500px;
-  width: 100%;
-  margin-bottom: 20px;
-  background-image: url("back.jpg");
-  color: white;
-}
-
-.carousel > h1 {
-	margin-left: 50px;
-
-}
-.carousel > p {
-  font-size: 28px;
-  margin-left: 50px;
-  color: white;
 }
