@@ -7,6 +7,7 @@
 
 
 body {
+  min-width: 375px;
   margin: 0px;
   font-family: 'segoe ui';
   font-size: 22px;
@@ -14,7 +15,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-rows: 80px 700px
+  grid-template-rows: 80px;
 }
 
 .nav {
@@ -22,11 +23,12 @@ body {
 }
 
 .nav > .nav-header {
+  justify-content: flex-start;
 }
 
 .nav > .nav-header > #logo {
-  margin-top: -20px;
-  height: 135px;
+  margin-top: -15px;
+  height: 120px;
 }
 
 
@@ -57,6 +59,7 @@ body {
 
 
 .carousel {
+  height: calc(100vh - 80px);
   display: grid;
   grid-template-rows: 2fr 1fr;
   background-image: url("back.jpg");
@@ -132,7 +135,7 @@ section {
   .nav > .nav-btn > label {
     display: inline-block;
     height: 80px;
-    padding: 15px;
+    padding: 20px;
   }
   .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
     color: #111;
@@ -140,7 +143,7 @@ section {
   .nav > .nav-btn > label > span {
     display: block;
     width: 60px;
-    height: 25px;
+    height: 20px;
     border-top: 2px solid #111;
   }
   .nav > .nav-links {
