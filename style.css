@@ -15,7 +15,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-rows: 80px;
+  grid-template-rows: 80px minmax(calc(100vh - 80px), auto);
 }
 
 .nav {
@@ -59,34 +59,33 @@ body {
 
 
 .carousel {
-  height: calc(100vh - 80px);
-  display: grid;
-  grid-template-rows: 2fr 1fr;
+  display: flex;
   background-image: url("back.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: white;
-
 }
 
-.carousel > h1 {
-	margin: 1rem;
-  align-self: flex-end;
-  float: right;
+.carhead {
+    align-self: flex-end;
+}
+
+.carousel > .carhead > h1 {
+  margin: 1rem;
+  margin-bottom: 2rem;
   font-size:  4rem;
   font-weight:  300;
   text-shadow: 1px 1px 3px #000;
   text-align: left;
 }
-.carousel > p {
-  font-size: 26px;
+
+.carousel > .carhead > p {
+  font-size: 28px;
+  text-align: justify;
   margin: 1rem;
-  align-self: flex-end;
-  float: left;
   max-width: 60rem;
-  text-align:  left;
   font-weight:  300;
   text-shadow: 1px 1px 3px #000;
 }
@@ -97,7 +96,7 @@ body {
   margin-right: 0.75em;
   column-gap: 0.25em;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 #main > h2 {
