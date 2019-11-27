@@ -1,0 +1,103 @@
+@import "compass/css3";
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  min-width: 375px;
+  margin: 0px;
+  font-family: 'segoe ui';
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 80px;
+}
+
+.nav {
+  background-color: #F1F2F2;
+}
+
+.nav > .nav-header {
+  justify-content: flex-start;
+}
+
+.nav > .nav-header > #logo {
+  margin-top: -15px;
+  height: 120px;
+}
+
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 28px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 30px 10px 13px 10px;
+  text-decoration: none;
+  color: #111;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: #77BD8B;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:1280px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    height: 80px;
+    padding: 20px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    color: #111;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 60px;
+    height: 20px;
+    border-top: 2px solid #111;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #F1F2F2;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 80px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+}
