@@ -1,17 +1,21 @@
 <!DOCTYPE HTML>
 <html>
- <head>
-   <script language="JavaScript" type="text/javascript">
-     function redirection {
-       var userLang = navigator.language || navigator.userLanguage;
-       if (userLang == "ru") {
-           window.location.href = "ru/rundex.html"
-       }
-       else {
-           window.location.href = "en/endex.html"
-       }
-     }
-   </script>
- </head>
- <body onload = "redirection"></body>
+<head>
+
+</head>
+
+<body>
+  <script language="JavaScript" type="text/javascript">
+    function redirection() {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang == "ru") {
+        window.location.href = "ru/rundex.html"
+      }
+      else {
+        window.location.href = "en/endex.html"
+      }
+    }
+    redirection()
+  </script>
+</body>
 </html>
